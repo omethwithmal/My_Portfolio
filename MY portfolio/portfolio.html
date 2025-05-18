@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ometh Widmal - Creative Developer</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=General+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="gradient-blob"></div>
+        <div class="noise-overlay"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <span class="logo-text">Ometh Widmal</span>
+                <div class="logo-dot"></div>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link" data-text="Home">Home</a>
+                <a href="#about" class="nav-link" data-text="About">About</a>
+                <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+                <a href="#work" class="nav-link" data-text="Work">Work</a>
+                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch">
+                    <label for="theme-switch" class="theme-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+                <button class="menu-toggle">
+                    <div class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                
+                <h1 class="hero-title">
+                    <span class="line">Hi, I'm</span>
+                    <span class="line">Ometh Widmal</span>
+                </h1>
+                <p class="hero-subtitle">I'm a creative developer focused on building exceptional digital experiences that combine aesthetics with functionality.</p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn secondary">
+                        <span>Let's Talk</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="path/to/your/cv.pdf" class="download-cv" download>
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="src/profile2.jpg" alt="Ometh Widmal">
+                    <div class="image-decoration"></div>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item" data-tech="React">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="tech-item" data-tech="Node.js">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="tech-item" data-tech="JavaScript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="tech-item" data-tech="Python">
+                        <i class="fab fa-python"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="highlight-text">Passionate Full Stack Developer & UI/UX Designer crafting exceptional digital experiences.</p>
+                <p>I'm a versatile developer with expertise in both web and mobile development. My journey in technology has equipped me with a unique blend of skills in frontend development, backend systems, and mobile app creation. I believe in writing clean, efficient code and creating intuitive user interfaces that solve real-world problems. With a strong foundation in modern technologies and a keen eye for design, I strive to build applications that are not only functional but also delightful to use.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-value="3">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-value="50">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-value="30">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-gallery">
+                <div class="gallery-grid">
+                    <div class="gallery-item main">
+                        <img src="src/profile.jpg" alt="Profile Photo">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="src/profile2.jpg" alt="Working on Project">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="src/profile3.jpg" alt="Team Collaboration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <h2 class="section-title">My Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">HTML</span>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">CSS</span>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">React.js</span>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percentage">63%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 63%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Kotlin</span>
+                    <span class="skill-percentage">74%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 74%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Figma</span>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Photoshop</span>
+                    <span class="skill-percentage">97%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 97%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Premiere Pro</span>
+                    <span class="skill-percentage">88%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="background-elements">
+            <div class="gradient-blob"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="section-header">
+            <h2 class="section-title">My Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>Creating responsive and interactive user interfaces with modern technologies.</p>
+                <div class="service-tags">
+                    <span><i class="fab fa-html5"></i> HTML</span>
+                    <span><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span><i class="fab fa-react"></i> React.js</span>
+                    <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                    <span><i class="fab fa-node-js"></i> Next.js</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p>Building robust and scalable server-side applications and APIs.</p>
+                <div class="service-tags">
+                    <span><i class="fab fa-js"></i> JavaScript</span>
+                    <span><i class="fab fa-node-js"></i> Node.js</span>
+                    <span><i class="fas fa-database"></i> MongoDB</span>
+                    <span><i class="fab fa-python"></i> Python</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and engaging user experiences with a focus on usability.</p>
+                <div class="service-tags">
+                    <span><i class="fab fa-figma"></i> Figma</span>
+                    <span><i class="fab fa-adobe"></i> Photoshop</span>
+                    <span><i class="fab fa-adobe"></i> Adobe XD</span>
+                    <span><i class="fab fa-sketch"></i> Sketch</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fab fa-android"></i>
+                </div>
+                <h3>Android Mobile App Development</h3>
+                <p>Developing native Android applications with modern tools and best practices.</p>
+                <div class="service-tags">
+                    <span><i class="fab fa-android"></i> Android</span>
+                    <span><i class="fab fa-java"></i> Java</span>
+                    <span><i class="fab fa-kotlin"></i> Kotlin</span>
+                    <span><i class="fas fa-fire"></i> Firebase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <div class="work-grid">
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>Creating responsive and interactive user interfaces with modern technologies.</p>
+                <div class="work-tech">
+                    <span><i class="fab fa-html5"></i> HTML</span>
+                    <span><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span><i class="fab fa-react"></i> React.js</span>
+                    <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                </div>
+                <a href="Allprojects.html" class="work-btn">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p>Building robust and scalable server-side applications and APIs.</p>
+                <div class="work-tech">
+                    <span><i class="fab fa-js"></i> JavaScript</span>
+                    <span><i class="fab fa-node-js"></i> Node.js</span>
+                    <span><i class="fas fa-database"></i> MongoDB</span>
+                    <span><i class="fab fa-python"></i> Python</span>
+                </div>
+                <a href="Allprojects.html" class="work-btn">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and engaging user experiences with a focus on usability.</p>
+                <div class="work-tech">
+                    <span><i class="fab fa-figma"></i> Figma</span>
+                    <span><i class="fab fa-adobe"></i> Photoshop</span>
+                    <span><i class="fab fa-adobe"></i> Adobe XD</span>
+                    <span><i class="fab fa-sketch"></i> Sketch</span>
+                </div>
+                <a href="Allprojects.html" class="work-btn">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fab fa-android"></i>
+                </div>
+                <h3>Android Mobile App Development</h3>
+                <p>Developing native Android applications with modern tools and best practices.</p>
+                <div class="work-tech">
+                    <span><i class="fab fa-android"></i> Android</span>
+                    <span><i class="fab fa-java"></i> Java</span>
+                    <span><i class="fab fa-kotlin"></i> Kotlin</span>
+                    <span><i class="fas fa-fire"></i> Firebase</span>
+                </div>
+                <a href="Allprojects.html" class="work-btn">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+           
+            <h2 class="section-title">Contact</h2>
+        </div>
+        <div class="contact-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                    <span class="form-icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                    <span class="form-icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Your Message</label>
+                    <span class="form-icon">
+                        <i class="fas fa-comment"></i>
+                    </span>
+                </div>
+                <button type="submit" class="btn primary">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>contact@omethwidmal.com</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+1 234 567 890</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Colombo, Sri Lanka</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Ometh Widmal. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Theme Toggle
+        const themeSwitch = document.getElementById('theme-switch');
+        const html = document.documentElement;
+
+        themeSwitch.addEventListener('change', () => {
+            if (themeSwitch.checked) {
+                html.setAttribute('data-theme', 'dark');
+            } else {
+                html.setAttribute('data-theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const navLinksItems = document.querySelectorAll('.nav-link');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        navOverlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+
+        // Skills Progress Animation
+        const skillBars = document.querySelectorAll('.skill-progress');
+        
+        const animateSkills = () => {
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        };
+
+        // Intersection Observer for Skills Animation
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkills();
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelector('.skills-section').forEach(section => {
+            skillsObserver.observe(section);
+        });
+
+        // Stats Counter Animation
+        const stats = document.querySelectorAll('.stat-number');
+        
+        const animateStats = () => {
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-value'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const updateCount = () => {
+                    current += step;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+
+                updateCount();
+            });
+        };
+
+        // Intersection Observer for Stats Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelector('.stats-grid').forEach(grid => {
+            observer.observe(grid);
+        });
+    </script>
+</body>
+</html>
