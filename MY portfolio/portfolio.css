@@ -731,17 +731,12 @@ section {
     position: relative;
     overflow: hidden;
     background: var(--card-bg);
-    padding: 2.5rem 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.4s ease;
     border: 1px solid var(--border);
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--primary);
+    z-index: 1;
 }
 
 .stat-item::before {
@@ -754,165 +749,69 @@ section {
     background: var(--gradient-1);
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
 .stat-item:hover::before {
-    opacity: 0.05;
+    opacity: 0.1;
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stat-number {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--primary);
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     position: relative;
     z-index: 1;
     font-family: 'Clash Display', sans-serif;
     line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+    color: var(--secondary);
 }
 
 .stat-label {
     color: var(--text-light);
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: relative;
     z-index: 1;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-.skills-showcase {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-}
-
-.skill-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    width: 100%;
 }
 
-.skill-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-1);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--primary);
-}
-
-.skill-card:hover::before {
-    opacity: 0.05;
-}
-
-.skill-card:hover .skill-icon {
-    transform: scale(1.05);
-    background: var(--gradient-2);
-}
-
-.skill-card:hover h3 {
-    color: var(--primary);
-}
-
-.skill-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--gradient-1);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    margin-bottom: 0;
-}
-
-.skill-icon i {
-    font-size: 1.5rem;
-    color: white;
-}
-
-.skill-content {
-    flex: 1;
-    text-align: left;
-}
-
-.skill-card h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-    position: relative;
-    z-index: 1;
+.stat-item:hover .stat-label {
     color: var(--text);
 }
 
-.skill-card p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
-    line-height: 1.5;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    position: relative;
-    z-index: 1;
-}
-
-.skill-tags span {
-    background: var(--section-bg);
-    padding: 0.5rem 0.8rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    color: var(--text-light);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.skill-tags span i {
-    font-size: 1.4rem;
-    color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-.skill-tags span:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-}
-
-.skill-tags span:hover i {
-    color: white;
-    transform: scale(1.1);
-}
 
 /* About Section Gallery */
 .about-gallery {
@@ -986,31 +885,36 @@ section {
 /* Work Section */
 .work {
     background: var(--section-bg);
+    padding: 6rem 2rem;
+    position: relative;
 }
 
-.work-grid {
+.work-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
     max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    margin: 0 auto 3rem;
     padding: 0 2rem;
 }
 
-.work-card {
+.filter-btn {
+    padding: 0.75rem 1.5rem;
     background: var(--card-bg);
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text);
+    font-weight: 500;
+    cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow);
     position: relative;
     overflow: hidden;
-    border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
 }
 
-.work-card::before {
+.filter-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1022,48 +926,75 @@ section {
     transition: opacity 0.3s ease;
 }
 
+.filter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.filter-btn:hover::before {
+    opacity: 0.1;
+}
+
+.filter-btn.active {
+    background: var(--gradient-1);
+    color: white;
+    border-color: transparent;
+}
+
+.work-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.work-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid var(--border);
+}
+
 .work-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary);
 }
 
-.work-card:hover::before {
-    opacity: 0.05;
+.work-image {
+    height: 200px;
+    overflow: hidden;
 }
 
-.work-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--gradient-1);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.work-icon i {
-    font-size: 1.5rem;
-    color: white;
+.work-card:hover .work-image img {
+    transform: scale(1.05);
+}
+
+.work-content {
+    padding: 1.5rem;
 }
 
 .work-card h3 {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 0.75rem;
     color: var(--text);
 }
 
 .work-card p {
     color: var(--text-light);
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 1.25rem;
     line-height: 1.5;
 }
 
@@ -1072,15 +1003,13 @@ section {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
 }
 
 .work-tech span {
     background: var(--section-bg);
     padding: 0.5rem 0.8rem;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-light);
     display: flex;
     align-items: center;
@@ -1089,7 +1018,7 @@ section {
 }
 
 .work-tech span i {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--primary);
     transition: all 0.3s ease;
 }
@@ -1097,91 +1026,106 @@ section {
 .work-tech span:hover {
     background: var(--primary);
     color: white;
-    transform: translateY(-3px);
 }
 
 .work-tech span:hover i {
     color: white;
-    transform: scale(1.1);
 }
 
-.work-btn {
+.work-links {
+    margin-top: 1rem;
+}
+
+.work-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.8rem;
-    background: var(--primary);
-    color: white;
-    padding: 0.875rem 1.5rem;
-    border-radius: 8px;
+    gap: 0.5rem;
+    color: var(--primary);
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin-top: auto;
-    position: relative;
-    z-index: 1;
-    box-shadow: var(--shadow);
+    padding: 0.5rem 0;
 }
 
-.work-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-    background: var(--secondary);
-}
-
-.work-btn i {
-    transition: transform 0.3s ease;
-}
-
-.work-btn:hover i {
+.work-link:hover {
+    color: var(--secondary);
     transform: translateX(5px);
 }
 
-@media (max-width: 1200px) {
+.work-link i {
+    transition: transform 0.3s ease;
+}
+
+.work-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Filtering Animation */
+.work-card {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
     .work-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
+    .work-filters {
+        gap: 0.75rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
     .work-grid {
         grid-template-columns: 1fr;
         padding: 0 1rem;
     }
-
-    .work-card {
-        padding: 1.5rem;
-    }
-
-    .work-tech {
-        gap: 0.4rem;
-    }
-
-    .work-tech span {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.6rem;
-    }
-
-    .work-btn {
-        width: 100%;
-        justify-content: center;
+    
+    .work-image {
+        height: 180px;
     }
 }
 
 @media (max-width: 480px) {
-    .work-card {
-        padding: 1.2rem;
+    .work {
+        padding: 4rem 1rem;
     }
-
-    .work-icon {
-        width: 40px;
-        height: 40px;
+    
+    .work-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
     }
-
-    .work-icon i {
-        font-size: 1.2rem;
+    
+    .filter-btn {
+        white-space: nowrap;
+    }
+    
+    .work-content {
+        padding: 1.25rem;
+    }
+    
+    .work-tech span {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
     }
 }
-
 /* Contact Section */
 .contact-content {
     max-width: 1200px;
