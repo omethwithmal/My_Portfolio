@@ -58,7 +58,6 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                
                 <h1 class="hero-title">
                     <span class="line">Hi, I'm</span>
                     <span class="line">Ometh Widmal</span>
@@ -118,14 +117,23 @@
                 
                 <div class="stats-grid">
                     <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
                         <div class="stat-number" data-value="3">0</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
                         <div class="stat-number" data-value="50">0</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
                         <div class="stat-number" data-value="30">0</div>
                         <div class="stat-label">Happy Clients</div>
                     </div>
@@ -299,74 +307,138 @@
         <div class="section-header">
             <h2 class="section-title">Featured Projects</h2>
         </div>
+        
+        <!-- Filter Buttons -->
+        <div class="work-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend Development</button>
+            <button class="filter-btn" data-filter="backend">Backend Development</button>
+            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+        </div>
+        
         <div class="work-grid">
-            <div class="work-card">
-                <div class="work-icon">
-                    <i class="fas fa-code"></i>
+            <!-- Frontend Project 1 -->
+            <div class="work-card" data-category="frontend">
+                <div class="work-image">
+                    <img src="src/zenTea.png" alt="Zen Tea E-commerce Project">
                 </div>
-                <h3>Frontend Development</h3>
-                <p>Creating responsive and interactive user interfaces with modern technologies.</p>
-                <div class="work-tech">
-                    <span><i class="fab fa-html5"></i> HTML</span>
-                    <span><i class="fab fa-css3-alt"></i> CSS</span>
-                    <span><i class="fab fa-react"></i> React.js</span>
-                    <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                <div class="work-content">
+                    <h3>Zen Tea E-commerce</h3>
+                    <p>A modern e-commerce platform for tea enthusiasts with product filtering, cart functionality, and secure checkout.</p>
+                    <div class="work-tech">
+                        <span><i class="fab fa-react"></i> React</span>
+                        <span><i class="fab fa-js"></i> JavaScript</span>
+                        <span><i class="fab fa-css3-alt"></i>CSS</span>
+                    </div>
+                    <div class="work-links">
+                        <a href="https://github.com/yourusername/zen-tea" target="_blank" class="work-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
                 </div>
-                <a href="Allprojects.html" class="work-btn">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
-            <div class="work-card">
-                <div class="work-icon">
-                    <i class="fas fa-server"></i>
+            
+            <!-- Frontend Project 2 -->
+            <div class="work-card" data-category="frontend">
+                <div class="work-image">
+                    <img src="src/taskManager.png" alt="Task Manager App">
                 </div>
-                <h3>Backend Development</h3>
-                <p>Building robust and scalable server-side applications and APIs.</p>
-                <div class="work-tech">
-                    <span><i class="fab fa-js"></i> JavaScript</span>
-                    <span><i class="fab fa-node-js"></i> Node.js</span>
-                    <span><i class="fas fa-database"></i> MongoDB</span>
-                    <span><i class="fab fa-python"></i> Python</span>
+                <div class="work-content">
+                    <h3>Task Manager App</h3>
+                    <p>A productivity application with drag-and-drop task management, deadlines, and progress tracking.</p>
+                    <div class="work-tech">
+                        <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                        <span><i class="fab fa-js"></i> JavaScript</span>
+                        <span><i class="fab fa-sass"></i> SCSS</span>
+                    </div>
+                    <div class="work-links">
+                        <a href="https://github.com/yourusername/task-manager" target="_blank" class="work-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
                 </div>
-                <a href="Allprojects.html" class="work-btn">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
-            <div class="work-card">
-                <div class="work-icon">
-                    <i class="fas fa-paint-brush"></i>
+            
+            <!-- Backend Project 1 -->
+            <div class="work-card" data-category="backend">
+                <div class="work-image">
+                    <img src="src/apiGateway.png" alt="API Gateway System">
                 </div>
-                <h3>UI/UX Design</h3>
-                <p>Designing intuitive and engaging user experiences with a focus on usability.</p>
-                <div class="work-tech">
-                    <span><i class="fab fa-figma"></i> Figma</span>
-                    <span><i class="fab fa-adobe"></i> Photoshop</span>
-                    <span><i class="fab fa-adobe"></i> Adobe XD</span>
-                    <span><i class="fab fa-sketch"></i> Sketch</span>
+                <div class="work-content">
+                    <h3>API Gateway System</h3>
+                    <p>A scalable API gateway with authentication, rate limiting, and request routing for microservices architecture.</p>
+                    <div class="work-tech">
+                        <span><i class="fab fa-node-js"></i> Node.js</span>
+                        <span><i class="fas fa-database"></i> MongoDB</span>
+                        <span><i class="fas fa-server"></i> Express</span>
+                    </div>
+                    <div class="work-links">
+                        <a href="https://github.com/yourusername/api-gateway" target="_blank" class="work-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
                 </div>
-                <a href="Allprojects.html" class="work-btn">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
-            <div class="work-card">
-                <div class="work-icon">
-                    <i class="fab fa-android"></i>
+            
+            <!-- Backend Project 2 -->
+            <div class="work-card" data-category="backend">
+                <div class="work-image">
+                    <img src="src/authService.png" alt="Authentication Service">
                 </div>
-                <h3>Android Mobile App Development</h3>
-                <p>Developing native Android applications with modern tools and best practices.</p>
-                <div class="work-tech">
-                    <span><i class="fab fa-android"></i> Android</span>
-                    <span><i class="fab fa-java"></i> Java</span>
-                    <span><i class="fab fa-kotlin"></i> Kotlin</span>
-                    <span><i class="fas fa-fire"></i> Firebase</span>
+                <div class="work-content">
+                    <h3>Authentication Service</h3>
+                    <p>A secure authentication system with JWT, OAuth 2.0 integration, and role-based access control.</p>
+                    <div class="work-tech">
+                        <span><i class="fab fa-python"></i> Python</span>
+                        <span><i class="fas fa-database"></i> PostgreSQL</span>
+                        <span><i class="fab fa-docker"></i> Docker</span>
+                    </div>
+                    <div class="work-links">
+                        <a href="https://github.com/yourusername/auth-service" target="_blank" class="work-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
                 </div>
-                <a href="Allprojects.html" class="work-btn">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+            </div>
+            
+            <!-- UI/UX Project 1 -->
+            <div class="work-card" data-category="design">
+                <div class="work-image">
+                    <img src="src/fitnessApp.png" alt="Fitness App Design">
+                </div>
+                <div class="work-content">
+                    <h3>Fitness Mobile App</h3>
+                    <p>Complete UI/UX design for a fitness tracking application with workout plans and progress analytics.</p>
+                    <div class="work-tech">
+                        <span><i class="fab fa-figma"></i> Figma</span>
+                        <span><i class="fas fa-palette"></i> Adobe Illustrator</span>
+                    </div>
+                    <div class="work-links">
+                        <a href="https://www.figma.com/your-project-link" target="_blank" class="work-link">
+                            <i class="fab fa-figma"></i> View in Figma
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- UI/UX Project 2 -->
+            <div class="work-card" data-category="design">
+                <div class="work-image">
+                    <img src="src/dashboardUI.png" alt="Analytics Dashboard">
+                </div>
+                <div class="work-content">
+                    <h3>Analytics Dashboard</h3>
+                    <p>Data visualization dashboard design with interactive charts, filters, and dark/light mode.</p>
+                    <div class="work-tech">
+                        <span><i class="fab fa-figma"></i> Figma</span>
+                        <span><i class="fab fa-adobe"></i> Photoshop</span>
+                    </div>
+                    <div class="work-links">
+                        <a href="https://www.figma.com/your-dashboard-link" target="_blank" class="work-link">
+                            <i class="fab fa-figma"></i> View in Figma
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -374,7 +446,6 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="section-header">
-           
             <h2 class="section-title">Contact</h2>
         </div>
         <div class="contact-content">
@@ -537,9 +608,10 @@
             });
         }, { threshold: 0.2 });
 
-        document.querySelector('.skills-section').forEach(section => {
-            skillsObserver.observe(section);
-        });
+        const skillsSection = document.querySelector('.skills');
+        if (skillsSection) {
+            skillsObserver.observe(skillsSection);
+        }
 
         // Stats Counter Animation
         const stats = document.querySelectorAll('.stat-number');
@@ -573,10 +645,42 @@
                     observer.unobserve(entry.target);
                 }
             });
+        }, { threshold: 0.1 });
+
+        const statsGrid = document.querySelector('.stats-grid');
+        if (statsGrid) {
+            observer.observe(statsGrid);
+        }
+
+        // Project Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.work-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
         });
 
-        document.querySelector('.stats-grid').forEach(grid => {
-            observer.observe(grid);
+        // Initialize all projects to show
+        window.addEventListener('DOMContentLoaded', () => {
+            projectCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
         });
     </script>
 </body>
