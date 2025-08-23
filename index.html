@@ -913,6 +913,7 @@
             background: var(--gradient-1);
             opacity: 0;
             transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
         .skill-category-btn:hover {
@@ -958,6 +959,7 @@
             background: var(--gradient-1);
             opacity: 0;
             transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
         .skill-card:hover {
@@ -1125,6 +1127,7 @@
             background: var(--gradient-1);
             opacity: 0;
             transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
         .service-card:hover {
@@ -1264,6 +1267,7 @@
             background: var(--gradient-1);
             opacity: 0;
             transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
         .filter-btn:hover {
@@ -1376,6 +1380,7 @@
             margin-top: 1rem;
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .work-link {
@@ -1403,6 +1408,204 @@
 
         .work-link:hover i {
             transform: scale(1.1);
+        }
+
+        /* Project Background Button */
+        .project-bg-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: var(--section-bg);
+            border: 1px solid var(--border);
+            cursor: pointer;
+        }
+
+        .project-bg-btn:hover {
+            color: var(--primary);
+            background: var(--card-bg);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-bg-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .project-bg-btn:hover i {
+            transform: translateY(-2px);
+        }
+
+        /* Project Background Modal */
+        .project-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: relative;
+            background: var(--card-bg);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            z-index: 2001;
+        }
+
+        .project-modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .modal-close:hover {
+            color: var(--primary);
+            background: var(--section-bg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: calc(90vh - 120px);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-description {
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-features {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-features h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .modal-features ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        .modal-features li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .modal-features li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .modal-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-tech span {
+            background: var(--section-bg);
+            padding: 0.5rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-tech span i {
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .modal-links {
+            display: flex;
+            gap: 1rem;
         }
 
         /* Contact Section */
@@ -1504,6 +1707,7 @@
             background: var(--gradient-1);
             opacity: 0;
             transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
         .info-card:hover {
@@ -1581,6 +1785,7 @@
             opacity: 0;
             transition: opacity 0.3s ease;
             border-radius: 50%;
+            z-index: -1;
         }
 
         .social-link:hover {
@@ -1883,6 +2088,20 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+
+            .modal-content {
+                width: 95%;
+                max-height: 85vh;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+                max-height: calc(85vh - 120px);
+            }
+
+            .modal-links {
+                flex-direction: column;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1956,6 +2175,18 @@
             .skill-card {
                 padding: 1.5rem;
             }
+
+            .modal-header {
+                padding: 1rem 1.5rem;
+            }
+
+            .modal-body {
+                padding: 1rem;
+            }
+
+            .modal-image {
+                height: 180px;
+            }
         }
 
         .download-cv {
@@ -1986,6 +2217,7 @@
             background: var(--gradient-2);
             opacity: 0;
             transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
         .download-cv:hover {
@@ -2437,7 +2669,9 @@
                         <a href="https://github.com/yourusername/zen-tea" target="_blank" class="work-link">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
-                       
+                        <a href="#" class="project-bg-btn" data-project="project1">
+                            <i class="fas fa-info-circle"></i> Project Background
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2462,6 +2696,9 @@
                         <a href="#" class="work-link">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
+                        <a href="#" class="project-bg-btn" data-project="project2">
+                            <i class="fas fa-info-circle"></i> Project Background
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2482,6 +2719,9 @@
                     <div class="work-links">
                         <a href="https://github.com/yourusername/api-gateway" target="_blank" class="work-link">
                             <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="#" class="project-bg-btn" data-project="project3">
+                            <i class="fas fa-info-circle"></i> Project Background
                         </a>
                     </div>
                 </div>
@@ -2504,6 +2744,9 @@
                         <a href="https://github.com/yourusername/auth-service" target="_blank" class="work-link">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
+                        <a href="#" class="project-bg-btn" data-project="project4">
+                            <i class="fas fa-info-circle"></i> Project Background
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2523,6 +2766,9 @@
                     <div class="work-links">
                         <a href="https://www.figma.com/your-project-link" target="_blank" class="work-link">
                             <i class="fab fa-figma"></i> View in Figma
+                        </a>
+                        <a href="#" class="project-bg-btn" data-project="project5">
+                            <i class="fas fa-info-circle"></i> Project Background
                         </a>
                     </div>
                 </div>
@@ -2544,11 +2790,146 @@
                         <a href="https://www.figma.com/your-dashboard-link" target="_blank" class="work-link">
                             <i class="fab fa-figma"></i> View in Figma
                         </a>
+                        <a href="#" class="project-bg-btn" data-project="project6">
+                            <i class="fas fa-info-circle"></i> Project Background
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Project Background Modals -->
+    <div class="project-modal" id="project1-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Zen Tea E-commerce - Project Background</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Zen Tea E-commerce Project">
+                </div>
+                <div class="modal-description">
+                    <p>Zen Tea is a modern e-commerce platform designed specifically for tea enthusiasts. The project was born out of a need for a specialized marketplace that focuses on the unique requirements of tea lovers, offering features like tea origin tracking, brewing recommendations, and subscription services.</p>
+                    
+                    <p>This project presented several interesting challenges, including implementing a robust filtering system for tea varieties, creating an intuitive user experience for both desktop and mobile users, and integrating secure payment processing with support for subscription models.</p>
+                </div>
+                
+                <div class="modal-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Advanced product filtering by tea type, origin, and flavor profile</li>
+                        <li>Subscription management system for recurring tea deliveries</li>
+                        <li>Interactive brewing guide with customizable parameters</li>
+                        <li>User review and rating system with photo uploads</li>
+                        <li>Wishlist and gift recommendation features</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-tech">
+                    <h4>Technologies Used</h4>
+                    <span><i class="fab fa-react"></i> React</span>
+                    <span><i class="fab fa-node-js"></i> Node.js</span>
+                    <span><i class="fas fa-database"></i> MongoDB</span>
+                    <span><i class="fab fa-stripe"></i> Stripe</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-modal" id="project2-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Task Manager App - Project Background</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1139&q=80" alt="Task Manager App">
+                </div>
+                <div class="modal-description">
+                    <p>The Task Manager App was developed to address the need for a simple yet powerful productivity tool that combines task management with time tracking and goal setting. The project was inspired by the growing demand for remote work tools during the pandemic.</p>
+                    
+                    <p>Key challenges included creating an intuitive drag-and-drop interface, implementing real-time synchronization across devices, and designing a flexible system that could accommodate different productivity methodologies (GTD, Pomodoro, Eisenhower Matrix).</p>
+                </div>
+                
+                <div class="modal-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Drag-and-drop task organization with multiple view options (list, board, calendar)</li>
+                        <li>Time tracking with Pomodoro technique integration</li>
+                        <li>Collaborative workspaces for team projects</li>
+                        <li>Smart notifications and reminders based on user behavior</li>
+                        <li>Productivity analytics and reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-tech">
+                    <h4>Technologies Used</h4>
+                    <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                    <span><i class="fab fa-node-js"></i> Express</span>
+                    <span><i class="fas fa-database"></i> PostgreSQL</span>
+                    <span><i class="fab fa-socketio"></i> Socket.io</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modals for other projects (project3-modal to project6-modal) -->
+    <div class="project-modal" id="project3-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>API Gateway System - Project Background</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Content for project 3 -->
+            </div>
+        </div>
+    </div>
+
+    <div class="project-modal" id="project4-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Authentication Service - Project Background</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Content for project 4 -->
+            </div>
+        </div>
+    </div>
+
+    <div class="project-modal" id="project5-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Fitness Mobile App - Project Background</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Content for project 5 -->
+            </div>
+        </div>
+    </div>
+
+    <div class="project-modal" id="project6-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Analytics Dashboard - Project Background</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Content for project 6 -->
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -2791,6 +3172,47 @@
                     }
                 });
             });
+        });
+
+        // Project Background Modal Functionality
+        const projectButtons = document.querySelectorAll('.project-bg-btn');
+        const projectModals = document.querySelectorAll('.project-modal');
+        const modalCloseButtons = document.querySelectorAll('.modal-close');
+        const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+        projectButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectId = button.getAttribute('data-project');
+                const modal = document.getElementById(`${projectId}-modal`);
+                
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        function closeModals() {
+            projectModals.forEach(modal => {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = '';
+        }
+
+        modalCloseButtons.forEach(button => {
+            button.addEventListener('click', closeModals);
+        });
+
+        modalOverlays.forEach(overlay => {
+            overlay.addEventListener('click', closeModals);
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModals();
+            }
         });
 
         // Initialize all projects to show
