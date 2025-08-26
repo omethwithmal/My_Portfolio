@@ -704,6 +704,18 @@
             color: var(--primary);
             margin-bottom: 1.5rem;
             line-height: 1.4;
+            position: relative;
+        }
+
+        .highlight-text::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--gradient-1);
+            border-radius: 2px;
         }
 
         .stats-grid {
@@ -889,6 +901,7 @@
             flex-wrap: wrap;
             gap: 1rem;
             margin-bottom: 3rem;
+            position: relative;
         }
 
         .skill-category-btn {
@@ -1408,6 +1421,7 @@
 
         .work-link i {
             transition: transform 0.3s ease;
+            font-size: 1rem;
         }
 
         .work-link:hover i {
@@ -1540,9 +1554,25 @@
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 1.5rem;
+            position: relative;
         }
 
         .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-video {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .modal-video video {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -1734,6 +1764,11 @@
             margin: 0 auto 1.5rem;
             position: relative;
             z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover .info-icon {
+            transform: scale(1.1);
         }
 
         .info-icon i {
@@ -2240,6 +2275,10 @@
                 flex-direction: column;
             }
 
+            .modal-video {
+                height: 250px;
+            }
+
             /* Services Section Mobile Fixes */
             .services {
                 padding: 4rem 1rem;
@@ -2365,6 +2404,10 @@
 
             .modal-image {
                 height: 180px;
+            }
+
+            .modal-video {
+                height: 200px;
             }
 
             /* Extra Small Device Fixes */
@@ -2923,12 +2966,15 @@
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Hoddy eCommerce Website  Frontend Development Project Background</h3>
+                <h3>Hoddy eCommerce Website - Frontend Development Project Background</h3>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="modal-image">
-                    <img src="./Images/1.png" alt="Zen Tea E-commerce Project">
+                <div class="modal-video">
+                    <video autoplay loop muted playsinline>
+                        <source src="./Images/tripmitercove.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="modal-description">
                     <p>I designed and developed a modern eCommerce frontend for Hoddy, a Sri Lankan clothing business with a focus on international markets.</p>
@@ -3308,6 +3354,13 @@
                 if (modal) {
                     modal.classList.add('active');
                     document.body.style.overflow = 'hidden';
+                    
+                    // Play video when modal opens
+                    const video = modal.querySelector('video');
+                    if (video) {
+                        video.currentTime = 0;
+                        video.play();
+                    }
                 }
             });
         });
@@ -3315,6 +3368,12 @@
         function closeModals() {
             projectModals.forEach(modal => {
                 modal.classList.remove('active');
+                
+                // Pause video when modal closes
+                const video = modal.querySelector('video');
+                if (video) {
+                    video.pause();
+                }
             });
             document.body.style.overflow = '';
         }
